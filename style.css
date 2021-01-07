@@ -1,0 +1,9 @@
+input {
+	width: 100px;
+	border-color: gray;
+	border-radius: 5px;
+}
+
+li {
+	margin: 10px;
+}
