@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Irregulars - equal spell</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		 <script src="script.js"></script> 
+	</head>
+
+	<script>
+		const IDS = ['paid','said','laid']
+	</script>
+
+	<body>
+		These words, likely, should be the most easy ones - again :).
+
+		<ul id='list' type='1'>
+			<li> My sister can't (pay) <input id='paid'></input> the bill because her credit card was blocked.</li>
+			<li> The teacher (say) <input id='said'></input> this, but I can't remember.</li>
+			<li> She (lay) <input id='laid'></input> the baby in the bed.</li>
+		</ul>
+
+		<button onClick="verify(IDS)">Check</button>
+	</body>
+</html>
