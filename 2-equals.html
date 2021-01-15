@@ -4,14 +4,16 @@
 		<title>Irregulars - equal spell</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		 <script src="script.js"></script> 
+		<script src="script.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
 	</head>
 
 	<script>
 		const IDS = ['beat','bet','bid','cast','cost','cut','hit','hurt','let','put','quit','read','set','shed','shut','spit','spread']
 	</script>
 
-	<body>
+	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		In this words, they are written the simple past tense as the same way in the infinitive form. However, be careful about the pronounciation. Some of them aren't pronounced in the same way. For exemple, the infinitive form of the verb <b>read</b> is pronounced as <b><i>/riːd/</i></b> whereas the simple past tense is pronounced as <b><i>/red/</i></b>.
 
 		<ol id='list'>

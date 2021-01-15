@@ -4,14 +4,16 @@
 		<title>Irregulars - ep to pt</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		 <script src="script.js"></script> 
+		<script src="script.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
 	</head>
 
 	<script>
 		const IDS = ['crept','kept','slept','swept']
 	</script>
 
-	<body>
+	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		These words, likely, should be the most easy ones. The main difference between the infinitive tense and the past tense is the termination <b><i>ep</i></b> that becomes <b><i>pt</i></b>.
 
 		<ol id='list'>

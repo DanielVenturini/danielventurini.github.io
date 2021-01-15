@@ -4,14 +4,16 @@
 		<title>Irregulars - a single word</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		 <script src="script.js"></script> 
+		<script src="script.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
 	</head>
 
 	<script>
 		const IDS = ['awoke','arose','became','befell','beheld','begot','began','broke','built','blew','clung','came','dug','did','drew','drank','drove','ate','fell','felt','found','fled','flung','forgot','forgave','got','gave','grew','heard','held']
 	</script>
 
-	<body>
+	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		The change in this word is very simple: a single word from the infinitive to past tense. For example, the past tense of the word <i>wr<b>i</b>te</i> is <i>wr<b>o</b>te</i>. The unique change is the <b>i</b> to <b>o</b>. However, there is any pattern in how this change works.
 
 		<br><br>

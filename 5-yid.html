@@ -4,14 +4,16 @@
 		<title>Irregulars - y to id</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		 <script src="script.js"></script> 
+		<script src="script.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
 	</head>
 
 	<script>
 		const IDS = ['paid','said','laid']
 	</script>
 
-	<body>
+	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		These words, likely, are very easy to learn. The unique rule here is the ending of the word <b><i>y</i></b> that will be replaced by an <b><i>id</i></b> in the past tense.
 
 		<ol id='list'>

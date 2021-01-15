@@ -4,14 +4,16 @@
 		<title>Irregulars - ear to ore</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		 <script src="script.js"></script> 
+		<script src="script.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
 	</head>
 
 	<script>
 		const IDS = ['bore','swore','wore','tore']
 	</script>
 
-	<body>
+	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		In these words, the termination <b><i>ear</i></b> is replaced by <b><i>ore</i></b>.
 
 		<ol id='list'>
