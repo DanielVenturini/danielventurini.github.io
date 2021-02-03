@@ -7,22 +7,24 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['bore','swore','wore','tore']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		In these words, the termination <b><i>ear</i></b> is replaced by <b><i>ore</i></b>.
 
 		<ol id='list'>
-			<li>My sister (bear) <input id='bore'></input> this headache so long, but now she will take the medicine.</li>
-			<li>When you told me, I (swear) <input id='swore'></input> that I will keep it in secret.</li>
-			<li>Three months ago, Mary (wear) <input id='wore'></input> this dress, but now this dress won't fit her.</li>
-			<li>The nail (tear) <input id='tore'></input> a hole in my skirt.</li>
+			<li>My sister (<button onclick="document.getElementById('bore_audio').play()">bear</button>) <input id='bore'></input> this headache so long, but now she will take the medicine.</li>
+			<li>When you told me, I (<button onclick="document.getElementById('swore_audio').play()">swear</button>) <input id='swore'></input> that I will keep it in secret.</li>
+			<li>Three months ago, Mary (<button onclick="document.getElementById('wore_audio').play()">wear</button>) <input id='wore'></input> this dress, but now this dress won't fit her.</li>
+			<li>The nail (<button onclick="document.getElementById('tore_audio').play()">tear</button>) <input id='tore'></input> a hole in my skirt.</li>
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
+
+		<script>
+			const IDS = ['bore','swore','wore','tore']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>

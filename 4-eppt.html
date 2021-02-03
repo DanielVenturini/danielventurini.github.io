@@ -7,22 +7,29 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
 
-	<script>
-		const IDS = ['crept','kept','slept','swept']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		These words, likely, should be the most easy ones. The main difference between the infinitive tense and the past tense is the termination <b><i>ep</i></b> that becomes <b><i>pt</i></b>.
 
 		<ol id='list'>
-			<li> The camera didn't catch him because he (creep) <input id='crept'></input> through the door.</li>
-			<li> I (keep) <input id='kept'></input> your secret safe.</li>
-			<li> I'm late because my father (sleep) <input id='slept'></input> a lot and we lost the bus.</li>
-			<li> After dinner, Chris (sweep) <input id='swept'></input> the floor.</li>
+			<li> The camera didn't catch him because he (<button onclick="document.getElementById('crept_audio').play()">creep</button>) <input id='crept'></input> through the door.</li>
+
+			<li> I (<button onclick="document.getElementById('kept_audio').play()">keep</button>) <input id='kept'></input> your secret safe.</li>
+
+			<li> I'm late because my father (<button onclick="document.getElementById('slept_audio').play()">sleep</button>) <input id='slept'></input> a lot and we lost the bus.</li>
+
+			<li> After dinner, Chris (<button onclick="document.getElementById('swept_audio').play()">sweep</button>) <input id='swept'></input> the floor.</li>
+
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
+
+		<script>
+			const IDS = ['crept','kept','slept','swept']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>

@@ -7,35 +7,54 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['beat','bet','bid','cast','cost','cut','hit','hurt','let','put','quit','read','set','shed','shut','spit','spread']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		In this words, they're written the simple past tense as the same way in the infinitive form. However, be careful about the pronounciation. Some of them aren't pronounced in the same way. For exemple, the infinitive form of the verb <b>read</b> is pronounced as <b><i>/riːd/</i></b> whereas the simple past tense is pronounced as <b><i>/red/</i></b>.
 
 		<ol id='list'>
-			<li>Yesterday a police car (beat) <input id='beat'></input> in the tree near the corner of Main Street.</li>
-			<li>Marcus (bet) <input id='bet'></input> more than 300$ in the US team, but he didn't win anything.</li>
-			<li>When I (bid) <input id='bid'></input> money enough he didn't accepted.</li>
-			<li>The knight (cast) <input id='cast'></input> the sword far out into the lake.</li>
-			<li>It wasn't expansive, it just (cost) <input id='cost'></input> me about $15 when we were in the USA.</li>
-			<li>My sister (cut) <input id='cut'></input> her nails twice yesterday.</li>
-			<li>This famous guy (hit) <input id='hit'></input> a piece of brick in the photographer's face.</li>
-			<li>The end of dating in the new years eve (hurt) <input id='hurt'></input> my heart a lot.</li>
-			<li>Because he was sick, I (let) <input id='let'></input> him to carry the lightweight bag.</li>
-			<li>I (put) <input id='put'></input> the fork on your plate; it was at sink.</li>
-			<li>He almost (quit) <input id='quit'></input> the match clicking in Crtl+F4 (don't try it hahah).</li>
-			<li>My sister bought a medium book, up to 200 pages, and she (read) <input id='read'></input> at all yesterday.</li>
-			<li>Jonh (set) <input id='set'></input> the clock a few minutes ago, but it did not start yet.</li>
-			<li>The Monica's hair (shed) <input id='shed'></input> when she tried that new medicine.</li>
-			<li>Mary (shut) <input id='shut'></input> her book when the school rang.</li>
-			<li>That ballet dancer (spit) <input id='spit'></input> her legs, but it went wrong.</li>
-			<li>All of my aunts (spread) <input id='spread'></input> that fake news in the last month.</li>
+			<li>Yesterday a police car (<button onclick="document.getElementById('beat_audio').play()">beat</button>) <input id='beat'></input> in the tree near the corner of Main Street.</li>
+
+			<li>Marcus (<button onclick="document.getElementById('bet_audio').play()">bet</button>) <input id='bet'></input> more than 300$ in the US team, but he didn't win anything.</li>
+
+			<li>When I (<button onclick="document.getElementById('bid_audio').play()">bid</button>) <input id='bid'></input> money enough he didn't accepted.</li>
+
+			<li>The knight (<button onclick="document.getElementById('cast_audio').play()">cast</button>) <input id='cast'></input> the sword far out into the lake.</li>
+
+			<li>It wasn't expansive, it just (<button onclick="document.getElementById('cost_audio').play()">cost</button>) <input id='cost'></input> me about $15 when we were in the USA.</li>
+
+			<li>My sister (<button onclick="document.getElementById('cut_audio').play()">cut</button>) <input id='cut'></input> her nails twice yesterday.</li>
+
+			<li>This famous guy (<button onclick="document.getElementById('hit_audio').play()">hit</button>) <input id='hit'></input> a piece of brick in the photographer's face.</li>
+
+			<li>The end of dating in the new years eve (<button onclick="document.getElementById('hurt_audio').play()">hurt</button>) <input id='hurt'></input> my heart a lot.</li>
+
+			<li>Because he was sick, I (<button onclick="document.getElementById('let_audio').play()">let</button>) <input id='let'></input> him to carry the lightweight bag.</li>
+
+			<li>I (<button onclick="document.getElementById('put_audio').play()">put</button>) <input id='put'></input> the fork on your plate; it was at sink.</li>
+
+			<li>He almost (<button onclick="document.getElementById('quit_audio').play()">quit</button>) <input id='quit'></input> the match clicking in Crtl+F4 (<button onclick="document.getElementById('don_audio').play()">don</button>'t try it hahah).</li>
+
+			<li>My sister bought a medium book, up to 200 pages, and she (<button onclick="document.getElementById('read_audio').play()">read</button>) <input id='read'></input> at all yesterday.</li>
+
+			<li>Jonh (<button onclick="document.getElementById('set_audio').play()">set</button>) <input id='set'></input> the clock a few minutes ago, but it did not start yet.</li>
+
+			<li>The Monica's hair (<button onclick="document.getElementById('shed_audio').play()">shed</button>) <input id='shed'></input> when she tried that new medicine.</li>
+
+			<li>Mary (<button onclick="document.getElementById('shut_audio').play()">shut</button>) <input id='shut'></input> her book when the school rang.</li>
+
+			<li>That ballet dancer (<button onclick="document.getElementById('spit_audio').play()">spit</button>) <input id='spit'></input> her legs, but it went wrong.</li>
+
+			<li>All of my aunts (<button onclick="document.getElementById('spread_audio').play()">spread</button>) <input id='spread'></input> that fake news in the last month.</li>
+
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
+
+		<script>
+			const IDS = ['beat','bet','bid','cast','cost','cut','hit','hurt','let','put','quit','read','set','shed','shut','spit','spread']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>

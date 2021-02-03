@@ -7,25 +7,34 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['brought', 'bought', 'caught', 'fought', 'sought', 'taught', 'thought']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		All verbs in this class are ending with <b>ght</b>. When you learn the <a href="https://www.youtube.com/watch?v=qoXEk0lBaqg"><b>ght</b> pronounciation</a>, they will be easy.
 
 		<ol id='list'>
-			<li>They (bring) <input id="brought"></input> the wallet in the morning.</li>
-			<li>Guess what? I (buy) <input id="bought"  style="width: 100px"></input> a nice gift for your birthday.</li>
-			<li>My syster (catch) <input id="caught"  style="width: 100px"></input> the ball I threw her.</li>
-			<li>Did you see that Michael Chandler (fight) <input id="fought"  style="width: 100px"></input> with Benson in the Bellator 165?</li>
-			<li>I (seek) <input id="sought"  style="width: 100px"></input> for any profit, but I could not find anything.</li>
-			<li>Elisabeth (teach) <input id="taught"  style="width: 100px"></input> us the whole time about the monday exam.</li>
-			<li>My dog (think) <input id="thought"  style="width: 100px"></input> it is a cat, because I guess it said Meow.</li>
+			<li>They (<button onclick="document.getElementById('brought_audio').play()">bring</button>) <input id="brought"></input> the wallet in the morning.</li>
+
+			<li>Guess what? I (<button onclick="document.getElementById('bought_audio').play()">buy</button>) <input id="bought" style="width: 100px"></input> a nice gift for your birthday.</li>
+
+			<li>My syster (<button onclick="document.getElementById('caught_audio').play()">catch</button>) <input id="caught" style="width: 100px"></input> the ball I threw her.</li>
+
+			<li>Did you see that Michael Chandler (<button onclick="document.getElementById('fought_audio').play()">fight</button>) <input id="fought" style="width: 100px"></input> with Benson in the Bellator 165?</li>
+
+			<li>I (<button onclick="document.getElementById('sought_audio').play()">seek</button>) <input id="sought" style="width: 100px"></input> for any profit, but I could not find anything.</li>
+
+			<li>Elisabeth (<button onclick="document.getElementById('taught_audio').play()">teach</button>) <input id="taught" style="width: 100px"></input> us the whole time about the monday exam.</li>
+
+			<li>My dog (<button onclick="document.getElementById('thought_audio').play()">think</button>) <input id="thought" style="width: 100px"></input> it is a cat, because I guess it said Meow.</li>
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
+
+		<script>
+			const IDS = ['brought', 'bought', 'caught', 'fought', 'sought', 'taught', 'thought']
+			create_audio(IDS)
+		</script>
+
 	</body>
 </html>

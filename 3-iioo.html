@@ -7,11 +7,8 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['bled','bred','chose','fed','met','shot']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		The following words are very easy. They just lose a single <b><i>e</i></b> or a single <b><i>o</i></b>. So, the main difference between the infinitive tense and the simple past tense is the sound of <b><i>ee /i/</i></b> becomes <b><i>e /e/</i></b> or the sound of <b><i>oo /u/</i></b> becomes <b><i>o /o/</i></b>.
@@ -21,13 +18,24 @@
 
 		<ol id='list'>
 			<li>My arms (bleed) <input id='bled'></input> a lot of blood when I felt at School.</li>
-			<li>The Terriers (breed) <input id='bred'></input> five puppy last month.</li>
-			<li>My sister (choose) <input id='chose'></input> a shirt from the many in her wardrobe.</li>
-			<li>You already (feed) <input id='fed'></input> the animals early! Don't you remember?.</li>
-			<li>I can't believe Marcus really (meet) <input id='met'></input> Selena Gomes in Dubai two days ago.</li>
-			<li>It was my fault. I (shoot) <input id='shot'></input> the arrow in the Mary's mirror.</li>
+
+			<li>The Terriers (<button onclick="document.getElementById('bred_audio').play()">breed</button>) <input id='bred'></input> five puppy last month.</li>
+
+			<li>My sister (<button onclick="document.getElementById('chose_audio').play()">choose</button>) <input id='chose'></input> a shirt from the many in her wardrobe.</li>
+
+			<li>You already (<button onclick="document.getElementById('fed_audio').play()">feed</button>) <input id='fed'></input> the animals early! Don't you remember?.</li>
+
+			<li>I can't believe Marcus really (<button onclick="document.getElementById('met_audio').play()">meet</button>) <input id='met'></input> Selena Gomes in Dubai two days ago.</li>
+
+			<li>It was my fault. I (<button onclick="document.getElementById('shot_audio').play()">shoot</button>) <input id='shot'></input> the arrow in the Mary's mirror.</li>
+
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
+
+		<script>
+			const IDS = ['bled','bred','chose','fed','met','shot']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>

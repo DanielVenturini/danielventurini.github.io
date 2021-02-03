@@ -7,21 +7,23 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['paid','said','laid']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		These words, likely, are very easy to learn. The unique rule here is the ending of the letter <b><i>y</i></b> that will be replaced by an <b><i>id</i></b> in the past tense.
 
 		<ol id='list'>
-			<li> My sister (pay) <input id='paid'></input> the bill because her credit card was no longer blocked.</li>
-			<li> The teacher (say) <input id='said'></input> something about it, but I can't remember.</li>
-			<li> She (lay) <input id='laid'></input> the baby on the bed.</li>
+			<li> My sister (<button onclick="document.getElementById('paid_audio').play()">pay</button>) <input id='paid'></input> the bill because her credit card was no longer blocked.</li>
+			<li> The teacher (<button onclick="document.getElementById('said_audio').play()">say</button>) <input id='said'></input> something about it, but I can't remember.</li>
+			<li> She (<button onclick="document.getElementById('laid_audio').play()">lay</button>) <input id='laid'></input> the baby on the bed.</li>
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
+
+		<script>
+			const IDS = ['paid','said','laid']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>
