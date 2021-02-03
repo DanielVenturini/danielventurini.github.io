@@ -7,46 +7,76 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['knew','lent','made','overcame','rode','rang','rose','ran','sent','shone','shrank','sang','sank','sat','slung','spent','spun','sprang','stuck','stung','stank','strove','swam','swung','threw','upheld','won','wrote']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		The change in these words is very simple: a single letter from the infinitive to past tense. For example, the past tense of the word <i>wr<b>i</b>te</i> is <i>wr<b>o</b>te</i>. The unique change is the <b>i</b> to <b>o</b>. However, there is any pattern in how this change works.
 
 		<ol id='list' start='31'>
-			<li>He (know) <input id='knew'></input> that she was lying.</li>
-			<li>Where is my car? I (lend) <input id='lent'></input> you but you didn't return it yet.</li>
-			<li>Those nice building were (make) <input id='made'></input> in the last decade.</li>
+			<li>He (<button onclick="document.getElementById('knew_audio').play()">know</button>) <input id='knew'></input> that she was lying.</li>
+
+			<li>Where is my car? I (<button onclick="document.getElementById('lent_audio').play()">lend</button>) <input id='lent'></input> you but you didn't return it yet.</li>
+
+			<li>Those nice building were (<button onclick="document.getElementById('made_audio').play()">make</button>) <input id='made'></input> in the last decade.</li>
+
 			<li>Eventually she (overcome) <input id='overcame'></input> her fear of dogs.</li>
-			<li>The winner (ride) <input id='rode'></input> his bicycle for 6 hours without stopping.</li>
-			<li>Sorry, I didn't hear it. When it (ring) <input id='rang'></input> in the morning I was slepping.</li>
-			<li>The balloon (rise) <input id='rose'></input> slowly into the air.</li>
-			<li>Seventy people (run) <input id='ran'></input> the marathon, but only twelve arrived at the end.</li>
-			<li>I (send) <input id='sent'></input> him a letter last week.</li>
-			<li>The car’s headlights (shine) <input id='shone'></input> right into my eyes.</li>
-			<li>My shirt (shrink) <input id='shrank'></input> in the wash.</li>
-			<li>I really loved the karaoke bar. We (sing) <input id='sang'></input> that awesome music there.</li>
-			<li>The Titanic (sink) <input id='sank'></input> after hitting an iceberg.</li>
-			<li>It was so funny: Marcus (sit) <input id='sat'></input> in the chair and it suddenly broke.</li>
-			<li>My brother (sling) <input id='slung'></input> little stones very far in that glass.</li>
-			<li>My aunt is crazy, she (spend) <input id='spent'></input> more than a thousand dolar in a smartphone.</li>
-			<li>My new spinner (spin) <input id='spun'></input> from ten o'clock to a quarter from ten.</li>
-			<li>The cat saw the couch and it (spring) <input id='sprang'></input> onto the couch.</li>
-			<li>My aunt (stick) <input id='stuck'></input> several of mine photos in her wall.</li>
-			<li>He was (sting) <input id='stung'></input> by a spider.</li>
-			<li>Definitely, that kitchen wasn't clean because it (stink) <input id='stank'></input> of fish.</li>
-			<li>In her writing she (strive) <input id='strove'></input> for a balance between innovation and familiar prose forms.</li>
-			<li>I stayed in the pool and I (swim) <input id='swam'></input> until my arms hurt.</li>
-			<li>When she walked in the streets, she (swing) <input id='swung'></input> her arms to up.</li>
-			<li>Amy (throw) <input id='threw'></input> the ball to the dog.</li>
+
+			<li>The winner (<button onclick="document.getElementById('rode_audio').play()">ride</button>) <input id='rode'></input> his bicycle for 6 hours without stopping.</li>
+
+			<li>Sorry, I didn't hear it. When it (<button onclick="document.getElementById('rang_audio').play()">ring</button>) <input id='rang'></input> in the morning I was slepping.</li>
+
+			<li>The balloon (<button onclick="document.getElementById('rose_audio').play()">rise</button>) <input id='rose'></input> slowly into the air.</li>
+
+			<li>Seventy people (<button onclick="document.getElementById('ran_audio').play()">run</button>) <input id='ran'></input> the marathon, but only twelve arrived at the end.</li>
+
+			<li>I (<button onclick="document.getElementById('sent_audio').play()">send</button>) <input id='sent'></input> him a letter last week.</li>
+
+			<li>The car’s headlights (<button onclick="document.getElementById('shone_audio').play()">shine</button>) <input id='shone'></input> right into my eyes.</li>
+
+			<li>My shirt (<button onclick="document.getElementById('shrank_audio').play()">shrink</button>) <input id='shrank'></input> in the wash.</li>
+
+			<li>I really loved the karaoke bar. We (<button onclick="document.getElementById('sang_audio').play()">sing</button>) <input id='sang'></input> that awesome music there.</li>
+
+			<li>The Titanic (<button onclick="document.getElementById('sank_audio').play()">sink</button>) <input id='sank'></input> after hitting an iceberg.</li>
+
+			<li>It was so funny: Marcus (<button onclick="document.getElementById('sat_audio').play()">sit</button>) <input id='sat'></input> in the chair and it suddenly broke.</li>
+
+			<li>My brother (<button onclick="document.getElementById('slung_audio').play()">sling</button>) <input id='slung'></input> little stones very far in that glass.</li>
+
+			<li>My aunt is crazy, she (<button onclick="document.getElementById('spent_audio').play()">spend</button>) <input id='spent'></input> more than a thousand dolar in a smartphone.</li>
+
+			<li>My new spinner (<button onclick="document.getElementById('spun_audio').play()">spin</button>) <input id='spun'></input> from ten o'clock to a quarter from ten.</li>
+
+			<li>The cat saw the couch and it (<button onclick="document.getElementById('sprang_audio').play()">spring</button>) <input id='sprang'></input> onto the couch.</li>
+
+			<li>My aunt (<button onclick="document.getElementById('stuck_audio').play()">stick</button>) <input id='stuck'></input> several of mine photos in her wall.</li>
+
+			<li>He was (<button onclick="document.getElementById('stung_audio').play()">sting</button>) <input id='stung'></input> by a spider.</li>
+
+			<li>Definitely, that kitchen wasn't clean because it (<button onclick="document.getElementById('stank_audio').play()">stink</button>) <input id='stank'></input> of fish.</li>
+
+			<li>In her writing she (<button onclick="document.getElementById('strove_audio').play()">strive</button>) <input id='strove'></input> for a balance between innovation and familiar prose forms.</li>
+
+			<li>I stayed in the pool and I (<button onclick="document.getElementById('swam_audio').play()">swim</button>) <input id='swam'></input> until my arms hurt.</li>
+
+			<li>When she walked in the streets, she (<button onclick="document.getElementById('swung_audio').play()">swing</button>) <input id='swung'></input> her arms to up.</li>
+
+			<li>Amy (<button onclick="document.getElementById('threw_audio').play()">throw</button>) <input id='threw'></input> the ball to the dog.</li>
+
 			<li>After heard the decision, Judge Davis (uphold) <input id='upheld'></input> the county court’s decision.</li>
-			<li>Dougy (win) <input id='won'></input> $400 after bet in South Africa team.</li>
-			<li>Stephen King (write) <input id='wrote'></input> a nice book called Under the Dome when he was an student, I guess.</li>
+
+			<li>Dougy (<button onclick="document.getElementById('won_audio').play()">win</button>) <input id='won'></input> $400 after bet in South Africa team.</li>
+
+			<li>Stephen King (<button onclick="document.getElementById('wrote_audio').play()">write</button>) <input id='wrote'></input> a nice book called Under the Dome when he was an student, I guess.</li>
+
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
+
+		<script>
+			const IDS = ['knew','lent','made','overcame','rode','rang','rose','ran','sent','shone','shrank','sang','sank','sat','slung','spent','spun','sprang','stuck','stung','stank','strove','swam','swung','threw','upheld','won','wrote']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>
