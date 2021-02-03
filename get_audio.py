@@ -33,7 +33,10 @@ def word_padded(word):
 	'''
 	If len(word) is smaller than 3, pad it with '_'
 	'''
-	return word + ('_' * (5-len(word)))
+	if len(word) >= 5:
+		return word[0:5]
+	else:
+		return word + ('_' * (5-len(word)))
 
 
 def get_path(word):
@@ -57,9 +60,6 @@ def get_url(word):
 
 WORDS.sort(key=lambda x: len(x))
 for word in WORDS:
-	if len(word) != 4:
-		continue
-
 
 	res = requests.head(get_url(word),
 		headers = {
@@ -75,6 +75,6 @@ for word in WORDS:
 		})
 
 	if res.status_code == 200:
-		print('{} -> {}'.format(word, get_path(word)))
+		print('{} -> {}'.format(word, get_url(word)))
 	else:
-		print('--{} -> {}'.format(word, get_path(word)))
+		print('--{} -> {}'.format(word, get_url(word)))
