@@ -7,47 +7,76 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['sawed','said','saw',"sought",'sold','sent','set','shook','shed','shone','shot','showed','shrank','shut','sang','sank','sat','slew','slept','slid','slung','spoke','spent','spun','spit','spread','sprang']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		This challenge contains all 133 verbs sorted alphabetically. These verbs are divided into five pages, each of them with 27 verbs.
 
 		<ol id='list'>
 			<li>Yesterday morning we (saw) <input id='sawed'></input> a hugh tree in the corner of avenue.</li>
-			<li>The teacher (say) <input id='said'></input> something about it, but I can't remember.</li>
-			<li>Last night me and my friends (see) <input id='saw'></input> a nice movie in the theater.</li>
-			<li>I (seek) <input id="sought"></input> for any profit, but I could not find anything.</li>
-			<li>Sorry, I don't have that good anymore. I (sell) <input id='sold'></input> for a guy five minutes ago.</li>
-			<li>I (send) <input id='sent'></input> him a letter last week.</li>
-			<li>Jonh (set) <input id='set'></input> the clock a few minutes ago, but it did not start yet.</li>
-			<li>The criminal was all shook (shake) <input id='shook'></input> up because he knew the police would find him.</li>
-			<li>The Monica's hair (shed) <input id='shed'></input> when she tried that new medicine.</li>
-			<li>The car’s headlights (shine) <input id='shone'></input> right into my eyes.</li>
-			<li>It was my fault. I (shoot) <input id='shot'></input> the arrow in the Mary's mirror.</li>
+
+			<li>The teacher (<button onclick="document.getElementById('said_audio').play()">say</button>) <input id='said'></input> something about it, but I can't remember.</li>
+
+			<li>Last night me and my friends (<button onclick="document.getElementById('saw_audio').play()">see</button>) <input id='saw'></input> a nice movie in the theater.</li>
+
+			<li>I (<button onclick="document.getElementById('sought_audio').play()">seek</button>) <input id="sought"></input> for any profit, but I could not find anything.</li>
+
+			<li>Sorry, I don't have that good anymore. I (<button onclick="document.getElementById('sold_audio').play()">sell</button>) <input id='sold'></input> for a guy five minutes ago.</li>
+
+			<li>I (<button onclick="document.getElementById('sent_audio').play()">send</button>) <input id='sent'></input> him a letter last week.</li>
+
+			<li>Jonh (<button onclick="document.getElementById('set_audio').play()">set</button>) <input id='set'></input> the clock a few minutes ago, but it did not start yet.</li>
+
+			<li>The criminal was all shook (<button onclick="document.getElementById('shook_audio').play()">shake</button>) <input id='shook'></input> up because he knew the police would find him.</li>
+
+			<li>The Monica's hair (<button onclick="document.getElementById('shed_audio').play()">shed</button>) <input id='shed'></input> when she tried that new medicine.</li>
+
+			<li>The car’s headlights (<button onclick="document.getElementById('shone_audio').play()">shine</button>) <input id='shone'></input> right into my eyes.</li>
+
+			<li>It was my fault. I (<button onclick="document.getElementById('shot_audio').play()">shoot</button>) <input id='shot'></input> the arrow in the Mary's mirror.</li>
+
 			<li>My little brother enjoyed a lot his birthday gift and (show) <input id='showed'></input> to his friends.</li>
-			<li>My shirt (shrink) <input id='shrank'></input> in the wash.</li>
-			<li>Mary (shut) <input id='shut'></input> her book when the school rang.</li>
-			<li>I really loved the karaoke bar. We (sing) <input id='sang'></input> that awesome music there.</li>
-			<li>The Titanic (sink) <input id='sank'></input> after hitting an iceberg.</li>
-			<li>It was so funny: Marcus (sit) <input id='sat'></input> in the chair and it suddenly broke.</li>
-			<li>I saw when the criminal (slay) <input id='slew'></input> that oldman with a knife.</li>
-			<li>I'm late because my father (sleep) <input id='slept'></input> a lot and we lost the bus.</li>
+
+			<li>My shirt (<button onclick="document.getElementById('shrank_audio').play()">shrink</button>) <input id='shrank'></input> in the wash.</li>
+
+			<li>Mary (<button onclick="document.getElementById('shut_audio').play()">shut</button>) <input id='shut'></input> her book when the school rang.</li>
+
+			<li>I really loved the karaoke bar. We (<button onclick="document.getElementById('sang_audio').play()">sing</button>) <input id='sang'></input> that awesome music there.</li>
+
+			<li>The Titanic (<button onclick="document.getElementById('sank_audio').play()">sink</button>) <input id='sank'></input> after hitting an iceberg.</li>
+
+			<li>It was so funny: Marcus (<button onclick="document.getElementById('sat_audio').play()">sit</button>) <input id='sat'></input> in the chair and it suddenly broke.</li>
+
+			<li>I saw when the criminal (<button onclick="document.getElementById('slew_audio').play()">slay</button>) <input id='slew'></input> that oldman with a knife.</li>
+
+			<li>I'm late because my father (<button onclick="document.getElementById('slept_audio').play()">sleep</button>) <input id='slept'></input> a lot and we lost the bus.</li>
+
 			<li>The best part was when Gerge (slide) <input id='slid'></input> in the wet floor.</li>
-			<li>My brother (sling) <input id='slung'></input> little stones very far in that glass.</li>
-			<li>When I (speak) <input id='spoke'></input> with myself I'm begin very crazy.</li>
-			<li>My aunt is crazy, she (spend) <input id='spent'></input> more than a thousand dolar in a smartphone.</li>
-			<li>My new spinner (spin) <input id='spun'></input> from ten o'clock to a quarter from ten.</li>
-			<li>That ballet dancer (spit) <input id='spit'></input> her legs, but it went wrong.</li>
-			<li>All of my aunts (spread) <input id='spread'></input> that fake news in the last month.</li>
-			<li>The cat saw the couch and it (spring) <input id='sprang'></input> onto the couch.</li>
+
+			<li>My brother (<button onclick="document.getElementById('slung_audio').play()">sling</button>) <input id='slung'></input> little stones very far in that glass.</li>
+
+			<li>When I (<button onclick="document.getElementById('spoke_audio').play()">speak</button>) <input id='spoke'></input> with myself I'm begin very crazy.</li>
+
+			<li>My aunt is crazy, she (<button onclick="document.getElementById('spent_audio').play()">spend</button>) <input id='spent'></input> more than a thousand dolar in a smartphone.</li>
+
+			<li>My new spinner (<button onclick="document.getElementById('spun_audio').play()">spin</button>) <input id='spun'></input> from ten o'clock to a quarter from ten.</li>
+
+			<li>That ballet dancer (<button onclick="document.getElementById('spit_audio').play()">spit</button>) <input id='spit'></input> her legs, but it went wrong.</li>
+
+			<li>All of my aunts (<button onclick="document.getElementById('spread_audio').play()">spread</button>) <input id='spread'></input> that fake news in the last month.</li>
+
+			<li>The cat saw the couch and it (<button onclick="document.getElementById('sprang_audio').play()">spring</button>) <input id='sprang'></input> onto the couch.</li>
+
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
 		<br> <br>
 		<a href='challenge-5.html'>Fifth page</a>
+
+		<script>
+			const IDS = ['sawed','said','saw',"sought",'sold','sent','set','shook','shed','shone','shot','showed','shrank','shut','sang','sank','sat','slew','slept','slid','slung','spoke','spent','spun','spit','spread','sprang']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>

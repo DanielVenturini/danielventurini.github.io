@@ -7,59 +7,76 @@
 		<script src="script.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="https://dictionary.cambridge.org/pt/external/scripts/dblclick.js"></script>
+		<script language="JavaScript" type="text/javascript" src="create_audio.js"></script>
 	</head>
-
-	<script>
-		const IDS = ['arose','awoke','bore','beat','became','befell','begot','began','beheld','bent','bet','bid','bound','bit','bled','blew','broke','bred','built','cast','chose','clung','came','cost']
-	</script>
 
 	<body onload="setupDoubleClick('https://dictionary.cambridge.org/', 'english-portuguese', true, null, 5, 'popup')">
 		This challenge contains all 133 verbs sorted alphabetically. These verbs are divided into five pages, each of them with 27 verbs.
 
 		<ol id='list'>
-			<li>The whole problem (arise) <input id='arose'></input> from a lack of communication.</li>
-			<li>I (awake) <input id='awoke'></input> today thinking in your problem.</li>
-			<li>My sister (bear) <input id='bore'></input> this headache so long, but now she will take the medicine.</li>
-			<li>Yesterday a police car (beat) <input id='beat'></input> in the tree near the corner of Main Street.</li>
-			<li>You (become) <input id='became'></input> so tired in now days.</li>
+			<li>The whole problem (<button onclick="document.getElementById('arose_audio').play()">arose</button>) <input id='arose'></input> from a lack of communication.</li>
+
+			<li>I (<button onclick="document.getElementById('awoke_audio').play()">awake</button>) <input id='awoke'></input> today thinking in your problem.</li>
+
+			<li>My sister (<button onclick="document.getElementById('bore_audio').play()">bear</button>) <input id='bore'></input> this headache so long, but now she will take the medicine.</li>
+
+			<li>Yesterday a police car (<button onclick="document.getElementById('beat_audio').play()">beat</button>) <input id='beat'></input> in the tree near the corner of Main Street.</li>
+
+			<li>You (<button onclick="document.getElementById('became_audio').play()">become</button>) <input id='became'></input> so tired in now days.</li>
+
 			<li>We still remember the terrible disasters that (befall) <input id='befell'></input> certain factories, particularly the one in Toulouse.</li>
+
 			<li>In the Bible it says that Adam (beget) <input id='begot'></input> Cain and Abel.</li>
-			<li>The meeting (begin) <input id='began'></input> ten minutes ago.</li>
-			<li>We heard about him but some days after, we (behold) <input id='beheld'></input> them.</li>
-			<li>The religious (bend) <input id='bent'></input> themselves to greet Buda.</li>
-			<li>Marcus (bet) <input id='bet'></input> more than 300$ in the US team, but he didn't win anything.</li>
 
-			<span class="daud">            
-			    <amp-audio layout="nodisplay" preload="none" id="ampaudio2" controlsList="nodownload">
-			        <div class="hdib" fallback>
-			            <p>Your browser doesn't support HTML5 audio</p>
-			        </div>
-			        <source type="audio/mpeg" src="https://dictionary.cambridge.org/media/english/us_pron/e/eus/eus75/eus75023.mp3"/>
-			    </amp-audio>
-			    <div title="Listen to the American English pronunciation" class="i i-volume-up c_aud htc hdib hp hv-1 fon tcu tc-bd lmr-10 lpt-3" on="tap: ampaudio2.play" role="button" tabindex="0">
-			    </div>
-			</span>
+			<li>The meeting (<button onclick="document.getElementById('began_audio').play()">begin</button>) <input id='began'></input> ten minutes ago.</li>
 
-			<li>When I (bid) <input id='bid'></input> money enough he didn't accepted.</li>
-			<li>His hands were (bind) <input id='bound'></input> behind his back.</li>
-			<li>When I went to see the Mario's dog, that dog (bite) <input id='bit'></input> my neck twice.</li>
+			<li>We heard about him but some days after, we (<button onclick="document.getElementById('beheld_audio').play()">behold</button>) <input id='beheld'></input> them.</li>
+
+			<li>The religious (<button onclick="document.getElementById('bent_audio').play()">bend</button>) <input id='bent'></input> themselves to greet Buda.</li>
+
+			<li>Marcus (<button onclick="document.getElementById('bet_audio').play()">bet</button>) <input id='bet'></input> more than 300$ in the US team, but he didn't win anything.</li>
+
+			<li>When I (<button onclick="document.getElementById('bid_audio').play()">bid</button>) <input id='bid'></input> money enough he didn't accepted.</li>
+
+			<li>His hands were (<button onclick="document.getElementById('bound_audio').play()">bind</button>) <input id='bound'></input> behind his back.</li>
+
+			<li>When I went to see the Mario's dog, that dog (<button onclick="document.getElementById('bit_audio').play()">bite</button>) <input id='bit'></input> my neck twice.</li>
+
 			<li>My arms (bleed) <input id='bled'></input> a lot of blood when I felt at School.</li>
-			<li>I (blow) <input id='blew'></input> the dust off the books.</li>
-			<li>The thieves (break) <input id='broke'></input> my car's window yesterday night.</li>
-			<li>The Terriers (breed) <input id='bred'></input> five puppy last month.</li>
-			<li>They (bring) <input id="brought"></input> the wallet in the morning.</li>
-			<li>He (build) <input id='built'></input> his own house.</li>
-			<li>Guess what? I (buy) <input id="bought"></input> a nice gift for your birthday.</li>
-			<li>The knight (cast) <input id='cast'></input> the sword far out into the lake.</li>
-			<li>My syster (catch) <input id="caught"></input> the ball I threw her.</li>
-			<li>My sister (choose) <input id='chose'></input> a shirt from the many in her wardrobe.</li>
-			<li>He was afraid, so he (cling) <input id='clung'></input> my hands in the dark.</li>
-			<li>You have no excuse to be late, because we (come) <input id='came'></input> in the same bus.</li>
-			<li>It wasn't expansive, it just (cost) <input id='cost'></input> me about $15 when we were in the USA.</li>
+
+			<li>I (<button onclick="document.getElementById('blew_audio').play()">blow</button>) <input id='blew'></input> the dust off the books.</li>
+
+			<li>The thieves (<button onclick="document.getElementById('broke_audio').play()">break</button>) <input id='broke'></input> my car's window yesterday night.</li>
+
+			<li>The Terriers (<button onclick="document.getElementById('bred_audio').play()">breed</button>) <input id='bred'></input> five puppy last month.</li>
+
+			<li>They (<button onclick="document.getElementById('brought_audio').play()">bring</button>) <input id="brought"></input> the wallet in the morning.</li>
+
+			<li>He (<button onclick="document.getElementById('built_audio').play()">build</button>) <input id='built'></input> his own house.</li>
+
+			<li>Guess what? I (<button onclick="document.getElementById('bought_audio').play()">buy</button>) <input id="bought"></input> a nice gift for your birthday.</li>
+
+			<li>The knight (<button onclick="document.getElementById('cast_audio').play()">cast</button>) <input id='cast'></input> the sword far out into the lake.</li>
+
+			<li>My syster (<button onclick="document.getElementById('caught_audio').play()">catch</button>) <input id="caught"></input> the ball I threw her.</li>
+
+			<li>My sister (<button onclick="document.getElementById('chose_audio').play()">choose</button>) <input id='chose'></input> a shirt from the many in her wardrobe.</li>
+
+			<li>He was afraid, so he (<button onclick="document.getElementById('clung_audio').play()">cling</button>) <input id='clung'></input> my hands in the dark.</li>
+
+			<li>You have no excuse to be late, because we (<button onclick="document.getElementById('came_audio').play()">come</button>) <input id='came'></input> in the same bus.</li>
+
+			<li>It wasn't expansive, it just (<button onclick="document.getElementById('cost_audio').play()">cost</button>) <input id='cost'></input> me about $15 when we were in the USA.</li>
+
 		</ol>
 
 		<button onClick="verify(IDS)">Check</button>
 		<br> <br>
 		<a href='challenge-2.html'>Second page</a>
+
+		<script>
+			const IDS = ['arose','awoke','bore','beat','became','befell','begot','began','beheld','bent','bet','bid','bound','bit','bled','blew','broke','bred','built','cast','chose','clung','came','cost']
+			create_audio(IDS)
+		</script>
 	</body>
 </html>
